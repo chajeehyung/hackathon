@@ -31,6 +31,15 @@ font-weight: 600;
   margin : 200px auto;
 }
 
+img {
+    margin : 0 auto;
+}
+
+.flow-left {
+    margin : 10px;
+    float : left;
+}
+
 </style>
 
 {%if not request.GET.search_keyword %}
@@ -51,10 +60,10 @@ font-weight: 600;
 {%if request.GET.search_keyword %}
 
         {% for url in urls %}
-        <div class="">
+        <div class="flow-left row">
             <div class="card">
                 <div class="card-body">
-                    <img src="{{ url }}" alt="" class="card-img" width=100px>
+                    <img src="{{ url }}">
                 </div>
             </div>
         </div>
