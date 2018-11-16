@@ -47,7 +47,7 @@ button {
             <a href="" class="navbar-brand">크롤러</a>
 {%if request.GET.search_keyword %}
 
-              <form id="search-form" action="" class="form-inline ml-md-auto">
+              <form id="search-form" action="{% url 'posts:image-search' %}" class="form-inline ml-md-auto">
                   <input id="search-input"
                          type="text"
                          name="search_keyword"
