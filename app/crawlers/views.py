@@ -14,9 +14,8 @@ def image_list(request, search_keyword=''):
     url = url_prefix + search_keyword + url_surfix
 
     response = requests.get(url)
-    open('pby.html', 'wt').write(response.text)
-    html = open('pby.html', 'rt').read()
-    soup = BeautifulSoup(html, 'lxml')
+    soup = BeautifulSoup(response.text, 'lxml')
+
     col_list = soup.find_all('img')
     urls = []
     for col in col_list:
